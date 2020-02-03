@@ -68,5 +68,5 @@ begin
     end loop;
 end;
 /
-select * from tmp_output order by 1
+--select * from tmp_output order by 1
 /
