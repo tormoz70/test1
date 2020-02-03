@@ -35,3 +35,4 @@ SERVER orastat_tst OPTIONS (schema 'STAT_MK', table 'STAT_FORM');
 select * from orastat_mk.stat_form
 
 SELECT oracle_diag('orastat_tst');
+asd
