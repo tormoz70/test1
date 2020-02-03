@@ -1,0 +1,36 @@
+# yum localinstall http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm
+# yum install postgresql94-server
+
+# vi /etc/sysconfig/pgsql/postgresql-9.4
+-- add line
+PGDATA=/data/postgres
+
+# chown -R postgres /data/postgres
+# chmod -R 775 /data/postgres
+
+# chown -R postgres /data/stat_121
+# chmod -R 775 /data/stat_121
+
+# service postgresql-9.4 initdb
+
+# chkconfig postgresql-9.4 on
+
+# ### firewall - off
+# service iptables save
+# service iptables stop
+# chkconfig iptables off
+
+# ### Sett pasword
+sudo -u postgres psql
+postgres=# alter user postgres password 'root';
+postgres=# \q
+
+Edit $PGDATA/pg_hba.conf
+add line:
+host all all 0.0.0.0/0 md5
+
+Edit $PGDATA/postgresql.conf
+set:
+listen_addresses='*'
+
+
