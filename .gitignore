@@ -1,0 +1,9 @@
+~$*
+*.iml
+srcs/
+bkp/
+trash/
+.idea/
+/db/
+target/
+deploy/

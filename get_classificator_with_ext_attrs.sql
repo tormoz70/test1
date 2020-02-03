@@ -32,3 +32,5 @@ from stat_mk.vr_classificator_value a
 where c.id = 91610077
   and rownum < 101
 order by cl_name, code
+
+asd
