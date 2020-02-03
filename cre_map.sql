@@ -1,5 +1,4 @@
 ﻿CREATE EXTENSION oracle_fdw;
-
 DROP SERVER orastat_tst;
 CREATE SERVER orastat_tst FOREIGN DATA WRAPPER oracle_fdw
           OPTIONS (dbserver 'stat_tst');
